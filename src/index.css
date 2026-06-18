@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 15 16 14;
+    --surface: 26 28 24;
+    --card: 32 35 30;
+    --primary: 74 88 68;
+    --primary-hover: 90 104 84;
+    --foreground: 245 245 245;
+    --muted: 167 171 164;
+    --border: 42 46 40;
+  }
+
+  .light {
+    --background: 214 217 210;
+    --surface: 228 230 224;
+    --card: 220 223 216;
+    --primary: 62 76 56;
+    --primary-hover: 74 88 68;
+    --foreground: 20 22 18;
+    --muted: 72 78 70;
+    --border: 188 192 184;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply mx-auto w-full max-w-[1480px] px-3 sm:px-4 md:px-5 lg:px-6;
+  }
+
+  /* Stays dark in both themes */
+  .dark-ui {
+    @apply border-[#2A2E28] bg-[#20231E] text-[#F5F5F5];
+  }
+
+  .dark-ui-muted {
+    @apply text-[#A7ABA4];
+  }
+
+  .dark-ui-primary {
+    @apply text-[#8D9A82];
+  }
+
+  .dark-ui-surface {
+    @apply bg-[#1A1C18];
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent;
+  }
+}
