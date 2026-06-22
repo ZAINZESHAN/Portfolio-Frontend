@@ -19,7 +19,7 @@ const experiences: TimelineEntryData[] = [
   {
     phase: "Full-Time",
     company: "Computing Yard",
-    role: "MERN Stack Developer",
+    role: "Software Engineer",
     duration: "1.5+ Years (Present)",
     isCurrent: true,
     description: [
